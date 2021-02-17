@@ -9,6 +9,7 @@ from rest_framework.generics import RetrieveAPIView
 
 from .serializers import UserSerializer
 
+
 @api_view(['GET','POST'])
 def getUsers(request):
     if request.method == 'GET':
