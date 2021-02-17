@@ -7,6 +7,6 @@ from rest_framework import serializers
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = '__all__'#('id','username','first_name','last_name','is_active','last_login','is_superuser') #'__all__'# 
+        fields = ('id','username','first_name','last_name','is_active','last_login','is_superuser') 
 
 
