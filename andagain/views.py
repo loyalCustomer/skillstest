@@ -41,8 +41,8 @@ def getUser(request,pk):
         serializer = UserSerializer(requested_user)
         return Response (serializer.data)
     elif request.method == 'PUT' or request.method =='PATCH':
-        first_name = ''
-        last_name = ''
+        first_name = requested_user.first_name
+        last_name = requested_user.last_name
         if 'first_name' in request.data:
             first_name = request.data["first_name"]
         if 'last_name' in request.data:
